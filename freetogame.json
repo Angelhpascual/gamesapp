@@ -1,0 +1,282 @@
+{
+  "name": "freetogame",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "getGameById",
+      "filename": "getGameById.bru",
+      "seq": 3,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://www.freetogame.com/api/game?id={game_id}",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "id",
+            "value": "{game_id}",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "getAllGames",
+      "filename": "getAllGames.bru",
+      "seq": 2,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://www.freetogame.com/api/games",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "getGameByCategory",
+      "filename": "getGameByCategory.bru",
+      "seq": 4,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://www.freetogame.com/api/games?platform={platform_name}",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "platform",
+            "value": "{platform_name}",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "sortGamesByReleaseDate",
+      "filename": "sortGamesByReleaseDate.bru",
+      "seq": 6,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://www.freetogame.com/api/games?sort-by=release_date",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "sort-by",
+            "value": "release_date",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "sortGamesByAlphabetical",
+      "filename": "sortGamesByAlphabetical.bru",
+      "seq": 7,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://www.freetogame.com/api/games?sort-by=alphabetical",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "sort-by",
+            "value": "alphabetical",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "sortGameByRelevance",
+      "filename": "sortGameByRelevance.bru",
+      "seq": 8,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://www.freetogame.com/api/games?sort-by=revelance",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "sort-by",
+            "value": "revelance",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "getGameByPlatformCategorySorted",
+      "filename": "getGameByPlatformCategorySorted.bru",
+      "seq": 5,
+      "settings": {
+        "encodeUrl": true
+      },
+      "tags": [],
+      "request": {
+        "url": "https://www.freetogame.com/api/games?platform={platform_name}&category={category_name}&sort-by={release-date}",
+        "method": "GET",
+        "headers": [],
+        "params": [
+          {
+            "name": "platform",
+            "value": "{platform_name}",
+            "type": "query",
+            "enabled": true
+          },
+          {
+            "name": "category",
+            "value": "{category_name}",
+            "type": "query",
+            "enabled": true
+          },
+          {
+            "name": "sort-by",
+            "value": "{release-date}",
+            "type": "query",
+            "enabled": true
+          }
+        ],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "freetogame",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0.00015544891357421875,
+    "filesCount": 1
+  }
+}
