@@ -1,7 +1,4 @@
 import { http, HttpResponse } from "msw"
-import { env } from "../../../shared/config/env"
-
-const baseUrl = env.freeToGameBaseUrl
 
 const gameDTO = {
   id: 1,
@@ -18,8 +15,8 @@ const gameDTO = {
 }
 
 export const freeToGameHandlers = [
-  http.get(`${baseUrl}/games`, () => HttpResponse.json([gameDTO])),
-  http.get(`${baseUrl}/game`, ({ request }) => {
+  http.get(`*/games`, () => HttpResponse.json([gameDTO])),
+  http.get(`*/game`, ({ request }) => {
     const url = new URL(request.url)
     const id = url.searchParams.get("id")
 
