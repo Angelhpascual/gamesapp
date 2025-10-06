@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import type { Game } from "../../domain/entities/Game"
 
 type GameCardProps = {
@@ -6,7 +7,10 @@ type GameCardProps = {
 
 export function GameCard({ game }: GameCardProps) {
   return (
-    <article className="rounded-lg border-slate-200 bg-white shadow-sm transition hover:shadow-md">
+    <Link
+      to={`/games/${game.id}`}
+      className="block rounded-lg border border-slate-200 bg-white shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-sky-500"
+    >
       <img
         className="h-48 w-full rounded-t-lg object-cover"
         src={game.thumbnail}
@@ -24,6 +28,6 @@ export function GameCard({ game }: GameCardProps) {
           </span>
         </div>
       </div>
-    </article>
+    </Link>
   )
 }
