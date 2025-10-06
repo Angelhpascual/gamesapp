@@ -1,6 +1,9 @@
 import { beforeAll, afterEach, afterAll } from "vitest"
 import { freeToGameHandlers } from "./src/infrastructure/http/mocks/handlers"
 import { setupServer } from "msw/node"
+import { env } from "./src/shared/config/env"
+
+env.freeToGameBaseUrl = "https://www.freetogame.com/api"
 
 export const mswServer = setupServer(...freeToGameHandlers)
 

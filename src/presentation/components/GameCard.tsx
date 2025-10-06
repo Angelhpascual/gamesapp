@@ -6,7 +6,7 @@ type GameCardProps = {
 
 export function GameCard({ game }: GameCardProps) {
   return (
-    <article className="rounded-lg border-slate-2 bg-white shadow-sm transition hover:shadow-md">
+    <article className="rounded-lg border-slate-200 bg-white shadow-sm transition hover:shadow-md">
       <img
         className="h-48 w-full rounded-t-lg object-cover"
         src={game.thumbnail}
